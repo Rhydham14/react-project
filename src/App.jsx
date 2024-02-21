@@ -5,6 +5,7 @@ import Buttonfun from "./Option";
 // import Game from "./Game";
 // import Form from "./Form";
 // import Login from "./Login";
+import Todo from "./Todo";
 
 const App = ()=>{
     return(
@@ -15,6 +16,7 @@ const App = ()=>{
             {/* <Game/> */}
             {/* <Form/> */}
             {/* <Login/> */}
+            <Todo/>
         </>
     );
 }
