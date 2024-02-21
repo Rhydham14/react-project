@@ -65,7 +65,7 @@ const Body = () => {
   return (
     <>
       <div style={bodyStyle}>
-        <h1>Hello perfect person</h1>
+        <h1>Hello perfect person from world</h1>
         <p>
           {icon}
         </p>
