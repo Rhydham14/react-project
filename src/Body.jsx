@@ -53,7 +53,6 @@ const Body = () => {
   const bodyStyle = {
     backgroundColor: bgcolor,
       color:'#112A46',
-    borderRadius: "20px",
     padding: "10%",
     marginTop:"0%",
     textAlign: "center",
