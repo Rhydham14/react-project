@@ -6,7 +6,8 @@ import Body from "./Body";
 // import Form from "./Form";
 // import Login from "./Login";
 // import Todo from "./Todo";
-import Accordion from "./Accordion";
+// import Accordion from "./Accordion";
+import Api from "./Api";
 
 const App = ()=>{
     return(
@@ -18,7 +19,8 @@ const App = ()=>{
             {/* <Form/> */}
             {/* <Login/> */}
             {/* <Todo/> */}
-            <Accordion/>
+            {/* <Accordion/> */}
+            <Api/>
         </>
     );
 }
