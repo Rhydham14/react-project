@@ -7,10 +7,22 @@
       "price": "50lkh"
     },
     {
-      "id": "ba64",
-      "name": "rohit",
-      "model": "player",
-      "price": "20lakhs"
+      "name": "",
+      "model": "",
+      "price": "",
+      "id": "ba64"
+    },
+    {
+      "name": "",
+      "model": "",
+      "price": "",
+      "id": "b2ff"
+    },
+    {
+      "id": "e614",
+      "name": "Lucifer ",
+      "model": "Actor",
+      "price": "200lakhs"
     }
   ]
 }

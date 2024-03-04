@@ -43,12 +43,20 @@ const Curd = () => {
       console.log("Error deleting item:", error);
     }
   }
-
+  const handleUpdate = async (id) => {
+    try {
+      await axios.put(`http://localhost:3001/users/${id}`, add); // Assuming the server supports PUT method for updates
+      fetchData(); // Fetch updated data after updating item
+    } catch (error) {
+      console.log("Error updating item:", error);
+    }
+  }
   return (
     <>
       {data.map((item) => (
         <li key={item.id}>
           {item.name} {item.model} {item.price}
+          <button onClick={() => handleUpdate(item.id)}>Update Data</button>
           <button onClick={() => handleDelete(item.id)}>Delete Data</button>
         </li>
       ))}
