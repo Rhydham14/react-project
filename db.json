@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Rhydham",
+      "model": "Businessman",
+      "price": "50lkh"
+    },
+    {
+      "id": "ba64",
+      "name": "rohit",
+      "model": "player",
+      "price": "20lakhs"
+    }
+  ]
+}
