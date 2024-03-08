@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": "0787",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "India",
+      "state": ""
+    },
+    {
+      "id": "7579",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "8f4e",
+      "fname": "ggggggggggg",
+      "lname": "vvvvvvv",
+      "email": "a@gmail.com",
+      "pswd": "qqq",
+      "cpswd": "qqq",
+      "contact": "22222",
+      "dob": "2024-03-14",
+      "country": "",
+      "state": "Gujarat"
+    },
+    {
+      "id": "6e5d",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "India",
+      "state": ""
+    },
+    {
+      "id": "d698",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "d85b",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "c7c3",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "India",
+      "state": ""
+    },
+    {
+      "id": "4d9e",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "d8af",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "e852",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "111111111",
+      "cpswd": "111111111",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "c80f",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    },
+    {
+      "id": "4cb3",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "pswd": "",
+      "cpswd": "",
+      "contact": "",
+      "dob": "",
+      "country": "",
+      "state": ""
+    }
+  ]
+}
