@@ -8,20 +8,22 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import "bootstrap/dist/css/bootstrap.min.css";
+// import { useLocation } from 'react-router-dom';
+
 
 const rows = [
-    { id: 1, title: 'John Doe', discription: 30 },
-    { id: 2, title: 'Jane Smith', discription: 25 },
-    { id: 3, title: 'Peter Parker', discription: 22 },
+    {title: 'John Doe', discription: 30 },
+    {  title: 'Jane Smith', discription: 25 },
+    { title: 'Peter Parker', discription: 22 },
   ];
 
   const columns = [
-    { field: 'id', headerName: 'ID' },
     { field: 'title', headerName: 'Title' },
     { field: 'discription', headerName: 'Discription' },
   ];
 
 const Blog = () => {
+
   return (
     <>
       <div className="container-fluid">
@@ -44,13 +46,18 @@ const Blog = () => {
           {rows.map((row) => (
             <TableRow key={row.id}>
               {columns.map((column) => (
-                <TableCell key={column.field}>{row[column.field]}</TableCell>
+                <TableCell key={column.field}>{row[column.field]}
+                </TableCell>
               ))}
+              <button className="btn btn-danger m-2">Update</button>
+              <button className="btn btn-danger m-2" >Remove</button>
+
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
+      <button className="btn btn-danger mt-2">Add Blog</button>
               
           </div>
         </div>

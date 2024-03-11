@@ -3,7 +3,7 @@
   list-style-type: none;
   
 }
-a {
+.demo {
   color: rgb(0, 0, 0);
 
 
@@ -12,8 +12,8 @@ a {
   font-size: 100px;
   border-radius: 10px;
 }
-a:hover {
-  box-shadow: 3px 2px 4px rgba(61, 57, 57, 0.795);
+.demo:hover {
+  box-shdemodow: 3px 2px 4px rgba(61, 57, 57, 0.795);
   background-color: rgb(228, 54, 54);
 }
 
@@ -27,3 +27,4 @@ a:hover {
   list-style-type: none;
   padding-top: 20px;
 }
+

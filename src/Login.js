@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 import "./Login.css";
 
 const Login = () => {
-  const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const [error, setError] = useState('');
-  const history = useHistory();
-
-
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -21,26 +18,30 @@ const Login = () => {
     e.preventDefault();
     try {
       // Fetch user data from API
-      const { data: users } = await axios.get('http://localhost:3001/users');
+      const response = await axios.get("http://localhost:3001/users");
+      const users = response.data;
+      // Log the entire response and users array to inspect their structure
+      console.log("Response:", response);
+      console.log("Users:", users);
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email === credentials.email) {
+          // console.log("sucess");
+          localStorage.setItem('fname', users[i].fname);
+          // locatStorage.seItem('')
+          navigate("/dashboard");
 
-      // Find user with matching email and password
-
-      const user = users.find((user) => user.email === credentials.email && user.password === credentials.password && credentials.email !== "" && credentials.password !== "");
-
-      if (user) {
-        console.log('Login successful', user);
-        history.push('/dashboard');
-
-        // Redirect or perform other actions upon successful login
-      } else {
-        setError('Invalid email or password');
+          return;
+        } else {
+          setError("Invalid email or password");
+          // console.log("unsucess");
+        }
       }
+      // Rest of your code...
     } catch (error) {
-      console.error('Login failed', error);
-      setError('An error occurred while logging in');
+      console.error("Login failed", error);
+      setError("An error occurred while logging in");
     }
   };
-  
 
   return (
     <div className="container-fluid" id="login">
@@ -82,7 +83,9 @@ const Login = () => {
               Submit
             </button>
             <p>Don't have an account?</p>
-            <Link to='/signup' className="nav-link text-dark text-sm">Sign up</Link>
+            <Link to="/signup" className="nav-link text-dark text-sm">
+              Sign up
+            </Link>
           </form>
         </div>
       </div>

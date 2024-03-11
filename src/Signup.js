@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Signup.css";
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
+
 
 const countries = [
   { id: 1, name: "India" },
@@ -44,6 +46,7 @@ const Signup = () => {
   const [valid, setValid] = useState(false);
   const [pswd, setPswd] = useState("");
   const [cpswd, setCpswd] = useState("");
+  const navigate = useNavigate();
 
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
@@ -81,37 +84,31 @@ const Signup = () => {
         country: "",
         state: "",
       });
+      navigate("/");
+
     } catch (error) {
       console.error("Error submitting data:", error);
     }
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-
+  
     if (name === "pswd") {
-      console.log(pswd);
-      console.log(cpswd);
       setPswd(value);
     } else if (name === "cpswd") {
       setCpswd(value);
-      console.log(pswd);
-      console.log(cpswd);
     }
-
-    if (pswd.length >= 8 ) { 
-      if(cpswd === pswd){
-        setValid(true);
-        console.log(pswd);
-        console.log(cpswd);
-      }
-    } else {
-      setValid(false);
-      console.log(pswd);
-      console.log(cpswd);
-    }
+  
     setData({ ...data, [name]: value });
   };
-
+  
+  useEffect(() => {
+    if (pswd.length >= 8 && cpswd === pswd) {
+      setValid(true);
+    } else {
+      setValid(false);
+    }
+  }, [pswd, cpswd]); // Run this effect whenever 'pswd' or 'cpswd' changes
   return (
     <>
       <div className="container-fluid ">
