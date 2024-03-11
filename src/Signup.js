@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Signup.css";
-import axios from "axios";
+import axios from "axios"
 
 const countries = [
   { id: 1, name: "India" },
@@ -91,7 +91,6 @@ const Signup = () => {
     if (name === "pswd") {
       console.log(pswd);
       console.log(cpswd);
-
       setPswd(value);
     } else if (name === "cpswd") {
       setCpswd(value);
@@ -99,10 +98,12 @@ const Signup = () => {
       console.log(cpswd);
     }
 
-    if (pswd.length >= 8 && cpswd === pswd) { 
-      setValid(true);
-      console.log(pswd);
-      console.log(cpswd);
+    if (pswd.length >= 8 ) { 
+      if(cpswd === pswd){
+        setValid(true);
+        console.log(pswd);
+        console.log(cpswd);
+      }
     } else {
       setValid(false);
       console.log(pswd);
