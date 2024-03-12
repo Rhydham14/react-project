@@ -5,6 +5,8 @@ import Signup from './Signup';
 import Dashboard from './Dashboard';
 import Blog from './Blog';
 import ReadBlog from './ReadBlog';
+import NewBlog from './NewBlog';
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
        <Route path="/dashboard" element={<Dashboard />} /> 
        <Route path="/blog" element={<Blog />} /> 
        <Route path="/readblog" element={<ReadBlog/>}/>
+       <Route path="/createblog" element={<NewBlog/>}/>
 
 
     </Routes>

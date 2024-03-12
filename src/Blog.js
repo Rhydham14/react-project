@@ -28,8 +28,9 @@ const Blog = () => {
           <div className="col-sm-10 ">
             <h1 className="text-danger text-center">Tetime</h1>
             <h3 className="text-dark text-center">Blog of the Time</h3>
-            <button className="btn btn-danger mt-2">Add Blog</button>
-            <table className="table">
+            <Link to="/createblog" id="lnk">
+                        <button className="btn btn-success m-2">Add Blog</button>
+                      </Link>            <table className="table">
               <thead>
                 <tr>
                   {columns.map((column) => (
