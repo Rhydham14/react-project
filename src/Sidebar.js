@@ -43,6 +43,15 @@ const Sidebar = () => {
             Blog
           </Link>
         </li>
+        <li id="list" className="nav-item active ">
+          <Link
+            to="/blog"
+            id="link"
+            className="nav-link demo text-white bg-danger text-md"
+          >
+            Logout
+          </Link>
+        </li>
       </nav>
     </div>
   );

@@ -1,29 +1,25 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+import "./Blog.css";
+
 // import { useLocation } from 'react-router-dom';
 
-
 const rows = [
-    {title: 'John Doe', discription: 30 },
-    {  title: 'Jane Smith', discription: 25 },
-    { title: 'Peter Parker', discription: 22 },
-  ];
+  { title: "Johnddddd Doe", discription: "A Lorem Ipsum generator is a tool used primarily in design, typesetting, and web development to generate placeholder text. Lorem Ipsum is a pseudo-Latin text commonly used as filler content in mock-ups, prototypes, and templates where the actual content is not yet available. It allows designers and developers to focus on the layout and visual aspects without being distracted by the content itself." },
+  { title: "John Doe", discription: "A Lorem Ipsum generator is a tool used primarily in design, typesetting, and web development to generate placeholder text. Lorem Ipsum is a pseudo-Latin text commonly used as filler content in mock-ups, prototypes, and templates where the actual content is not yet available. It allows designers and developers to focus on the layout and visual aspects without being distracted by the content itself." },
+  { title: "John Doe", discription: "A Lorem Ipsum generator is a tool used primarily in design, typesetting, and web development to generate placeholder text. Lorem Ipsum is a pseudo-Latin text commonly used as filler content in mock-ups, prototypes, and templates where the actual content is not yet available. It allows designers and developers to focus on the layout and visual aspects without being distracted by the content itself." },
 
-  const columns = [
-    { field: 'title', headerName: 'Title' },
-    { field: 'discription', headerName: 'Discription' },
-  ];
+];
+
+const columns = [
+  { field: "title", headerName: "Title" },
+  { field: "discription", headerName: "Discription" },
+];
 
 const Blog = () => {
-
   return (
     <>
       <div className="container-fluid">
@@ -32,33 +28,35 @@ const Blog = () => {
           <div className="col-sm-10 ">
             <h1 className="text-danger text-center">Tetime</h1>
             <h3 className="text-dark text-center">Blog of the Time</h3>
-
-            <TableContainer component={Paper}>
-      <Table sx={{ width: 1000 }}>
-        <TableHead>
-          <TableRow>
-            {columns.map((column) => (
-              <TableCell key={column.field}>{column.headerName}</TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              {columns.map((column) => (
-                <TableCell key={column.field}>{row[column.field]}
-                </TableCell>
-              ))}
-              <button className="btn btn-danger m-2">Update</button>
-              <button className="btn btn-danger m-2" >Remove</button>
-
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-      <button className="btn btn-danger mt-2">Add Blog</button>
-              
+            <button className="btn btn-danger mt-2">Add Blog</button>
+            <table className="table">
+              <thead>
+                <tr>
+                  {columns.map((column) => (
+                    <th key={column.field}>{column.headerName}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr key={row.id}>
+                    {columns.map((column) => (
+                      <td key={`${row.id}-${column.field}`}>
+                        {row[column.field]}
+                      </td>
+                    ))}
+                    <div className="m-2">
+                      <Link to="/ReadBlog" id="lnk">
+                        <button className="btn btn-dark m-2">Read</button>
+                      </Link>
+                      <button className="btn btn-success m-2">Update</button>
+                      <button className="btn btn-danger m-2">Remove</button>
+                    </div>
+                  </tr>
+                ))}
+              </tbody>
+            
+            </table>
           </div>
         </div>
       </div>

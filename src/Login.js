@@ -79,7 +79,7 @@ const Login = () => {
               />
             </div>
             {error && <div>{error}</div>}
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-dark mt-2">
               Submit
             </button>
             <p>Don't have an account?</p>

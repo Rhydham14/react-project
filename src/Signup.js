@@ -248,7 +248,7 @@ const Signup = () => {
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn  btn-dark mt-2">
                 Submit
               </button>
             </form>
