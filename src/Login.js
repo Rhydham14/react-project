@@ -24,7 +24,7 @@ const Login = () => {
       console.log("Response:", response);
       console.log("Users:", users);
       for (let i = 0; i < users.length; i++) {
-        if (users[i].email === credentials.email) {
+        if (users[i].email === credentials.email && credentials.email !=="" && users[i].pswd === credentials.password && credentials.password !=="" ) {
           // console.log("sucess");
           localStorage.setItem('fname', users[i].fname);
           // locatStorage.seItem('')
@@ -44,14 +44,14 @@ const Login = () => {
   };
 
   return (
-    <div className="container-fluid" id="login">
+    <div className="container-fluid"  >
       <h1 className="text-danger text-center">Tetime</h1>
-      <div className="row p">
-        <h1 className="login">Login</h1>
-        <div className="col-sm-12 text p-5 mx-auto d-flex align-items-center">
+      <div className="row ">
+        <h1 className="login" id="blog">Login</h1>
+        <div className="col-sm-12 ">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="email">Email address</label>
+              <label htmlFor="email" style={{color:"black"}}>Email address</label>
               <input
                 type="email"
                 className="form-control"
@@ -62,12 +62,12 @@ const Login = () => {
                 value={credentials.email}
                 onChange={handleChange}
               />
-              <small id="emailHelp" className="form-text text-white">
+              <small id="emailHelp" className="form-text text-dark">
                 We'll never share your email with anyone else.
               </small>
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" style={{color:"black"}}>Password</label>
               <input
                 type="password"
                 className="form-control"
@@ -78,11 +78,11 @@ const Login = () => {
                 onChange={handleChange}
               />
             </div>
-            {error && <div>{error}</div>}
+            {error && <div style={{color:"red"}}>{error}</div>}
             <button type="submit" className="btn btn-dark mt-2">
               Submit
             </button>
-            <p>Don't have an account?</p>
+            <p style={{color:"black"}}>Don't have an account?</p>
             <Link to="/signup" className="nav-link text-dark text-sm">
               Sign up
             </Link>

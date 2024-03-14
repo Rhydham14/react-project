@@ -113,9 +113,9 @@ const Signup = () => {
     <>
       <div className="container-fluid ">
         <h1 className="text-danger text-center">Tetime</h1>
-        <div className="row p">
+        <div className="row " id="p">
           <h1 className="singup">Signup</h1>
-          <div className="col-sm-12 text p-5  mx-auto  d-flex align-items-center">
+          <div className="col-sm-12  p-5  mx-auto  d-flex align-items-center" id="text">
             <form onSubmit={handleSubmit}>
               <div class="form-group">
                 <label for="firstName">First Name</label>
