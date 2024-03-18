@@ -46,9 +46,9 @@ const Login = () => {
   return (
     <div className="container-fluid"  >
       <h1 className="text-danger text-center">Tetime</h1>
-      <div className="row ">
-        <h1 className="login" id="blog">Login</h1>
-        <div className="col-sm-12 ">
+      <div className="row mx-auto d-flex justify-item-center">
+        <h1 className="login" id="login">Login</h1>
+        <div className="col-sm-12 p-5  mx-auto  d-flex align-items-center" id="text">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="email" style={{color:"black"}}>Email address</label>
