@@ -33,7 +33,7 @@ app.post('/submit-form', (req, res) => {
       pass: 'BRhpdZ6FkzUMjAApUY'
     },
   });
-    cron.schedule('* * * * * *', async () => {
+    cron.schedule('* * *  * * *', async () => {
         try {
           // Send mail with defined transport object
           const info = await transporter.sendMail({
@@ -41,7 +41,36 @@ app.post('/submit-form', (req, res) => {
             to: email,
             subject: "Server si sending everny second mail.",
             text: "Welcome to the world of digital mail",
-            html: "<b>Hello, how are you customer?</b>",
+            html: `<b>Dear mentor <br> MENTOR name  </b>
+            <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, accusamus.</P>
+            <table>
+                <tr>
+                    <th>Invoice no.</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>23-21-23</td>
+                    <td>2000</td>
+                </tr>
+                 <tr>
+                    <td>3</td>
+                    <td>13-2-24</td>
+                    <td>1500</td>
+                </tr>
+                 <tr>
+                    <td>4</td>
+                    <td>4-7-24</td>
+                    <td>1900</td>
+                </tr> <tr>
+                    <td>5</td>
+                    <td>14-3-24</td>
+                    <td>3000</td>
+                </tr>
+            </table>
+            
+            `
           });
       
           console.log("Message sent: %s", info.messageId);
